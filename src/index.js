@@ -1,15 +1,15 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import './index.css';
 import Calculator from './main/Calculator';
 import reportWebVitals from './reportWebVitals';
 
-ReactDOM.render(
+const container = document.getElementById('root');
+const root = createRoot(container);
+root.render(
     <div>
         <h1>Calculator</h1>
         <Calculator />
     </div>
-
-    , document.getElementById('root')
 );
 reportWebVitals();
